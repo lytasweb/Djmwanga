@@ -1,0 +1,463 @@
+:root {
+    --white-color: rgb(241, 241, 241);
+    --green-color: rgb(16, 84, 16);
+    --border-color-black: rgba(84, 84, 84, 0.5);
+}
+
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+}
+
+html,
+body {
+    background: rgb(248, 243, 243);
+    font-size: 69%;
+    overflow-x: hidden;
+}
+
+
+/* ############### SECTION FOR ADS ########### */
+
+header.sidebar-ads {
+    background: rgb(35, 34, 34);
+    height: 40vh;
+    position: relative;
+
+}
+
+header.sidebar-ads img {
+    width: 100%;
+    height: 100%;
+}
+
+#sidebar {
+    border-radius: 2px;
+
+}
+
+header.sidebar-ads .closebtn {
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+header.sidebar-ads .closebtn h1 {
+    text-align: right;
+    cursor: pointer;
+    font-size: 1.0rem;
+    border: 2px solid white;
+    padding: 2px;
+    border-radius: 50%;
+}
+
+
+
+/* ###################### MAIN BODY ################### */
+
+section.body {
+    background: rgb(214, 219, 214);
+    margin: 20px 40px 10px;
+    box-shadow:
+        -5px 0 10px rgba(0, 0, 0, 0.3),
+        5px 0 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.body-space {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+section.body .nav-bar {
+    background: black;
+    color: white;
+    border-bottom: 3px solid rgb(44, 79, 44);
+    font-size: 1.2rem;
+    padding: 10px 10vh 2vh 5vh;
+}
+
+section.body .nav-bar .body-space {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.social-icon {
+    display: flex;
+    padding: 0 2px;
+    gap: 1.2rem;
+}
+
+.social-icon li i {
+    font-size: 1.2rem;
+}
+
+.white-ground {
+    background: var(--white-color);
+    margin-top: 0;
+}
+
+.body-space .logo {
+    height: 120px;
+    border-bottom: 2px solid black;
+    margin-top: 4px;
+
+}
+
+.body-space .logo .logo-icon {
+    width: 200px;
+    height: 100px;
+}
+
+.body-space .logo .logo-icon img {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* sidebar sections */
+.sidebar-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sidebar-section .sidebar,
+.search-bar {
+    padding: 20px 10px;
+}
+
+.sidebar-section .sidebar .sidebar-tabs {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.sidebar-section .sidebar .sidebar-tabs li {
+    font-size: 1.2rem;
+}
+
+.sidebar-tabs li a {
+    color: rgb(23, 22, 22);
+    font-weight: 600;
+}
+
+.sidebar-tabs li a.active {
+    color: var(--green-color);
+}
+
+.sidebar-tabs li a:hover {
+    color: var(--green-color);
+}
+
+.sidebar-section .search-bar li i {
+    font-size: 1.2rem;
+}
+
+
+/* audios and links sections */
+.main-section {
+    display: flex;
+    margin-top: 18px;
+    flex-direction: flex;
+    justify-content: space-between;
+}
+
+.main-section .audio-part {
+    border-top: 3px solid black;
+    width: 69%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: var(--white-color);
+    justify-content: space-between;
+    overflow: hidden;
+    box-shadow:
+        -2px 0 10px rgba(107, 107, 107, 0.2),
+        2px 0 10px rgba(107, 107, 107, 0.2)
+}
+
+/* part a of the audio part */
+.main-section .audio-part .part {
+    padding: 10px;
+}
+
+.image-link {
+    padding: 5px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-link a img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-link a img:hover {
+    transform: scale(1.1);
+}
+
+.image-link .audio-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: var(--green-color);
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.image-description a {
+    font-size: 1.2rem;
+    color: black;
+}
+
+
+.image-link .audio-btn a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* right hands part */
+.main-section .link-part {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* search bar */
+.link-part .search-items {
+    border-top: 3px solid black;
+    height: 80px;
+    display: flex;
+    background: var(--white-color);
+    justify-content: center;
+    align-items: center;
+    box-shadow:
+        -2px 0 10px rgba(107, 107, 107, 0.2),
+        2px 0 10px rgba(107, 107, 107, 0.2)
+}
+
+.search-items .item-bar input {
+    border: 1px solid var(--border-color-black);
+}
+
+.search-items .item-bar input,
+button {
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.search-items .item-bar button {
+    background: var(--green-color);
+    color: white;
+    border: 1px solid var(--green-color);
+    cursor: pointer;
+}
+
+/* space left */
+.link-part .blank-space {
+    border-top: 3px solid black;
+    height: 200px;
+    background: var(--white-color);
+    box-shadow:
+        -2px 0 10px rgba(107, 107, 107, 0.2),
+        2px 0 10px rgba(107, 107, 107, 0.2)
+}
+
+/* quick links */
+.link-part .quick-links {
+    border-top: 3px solid black;
+    background: var(--white-color);
+    box-shadow:
+        -2px 0 10px rgba(107, 107, 107, 0.2),
+        2px 0 10px rgba(107, 107, 107, 0.2)
+}
+
+.quick-links .category {
+    padding: 10px;
+}
+
+.category table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.category table tr td {
+    border: 1px solid var(--border-color-black);
+    text-align: center;
+    padding: 10px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.category table tr td:hover {
+    border-bottom: 3px solid black;
+}
+
+.link-post {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    padding: 5px 10px;
+    gap: 13px;
+}
+
+.link-post .image-post {
+    width: 30%;
+    overflow: hidden;
+}
+
+.link-post .image-post img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.link-post .image-post img:hover{
+    transform: scale(1.1);
+}
+
+.link-post .post-description {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.post-description a {
+    font-size: 1.0rem;
+    font-weight: 600;
+    color: black;
+
+}
+
+.post-description i {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--border-color-black);
+}
+
+
+
+
+
+/* ################ SLIDESHOW PART ################## */
+
+.slide-show {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.slide-show .box {
+    background: var(--white-color);
+    border-top: 3px solid black;
+}
+
+.slide-show .box .header {
+    margin: 20px;
+    border-bottom: 2px solid black;
+}
+
+.box .header h1 {
+    font-weight: 600;
+    font-size: 2.1rem;
+}
+
+.slide-show .box .body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.box .body .block {
+    width: 23.5%;
+    height: 35vh;
+}
+
+.block .block-image {
+    width: 100%;
+    height: 23vh;
+    overflow: hidden;
+}
+
+.block-image a img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.block-image a img:hover{
+    transform: scale(1.1);
+}
+.block .block-des {
+    margin: 10px 0 10px;
+}
+
+.block .block-des p {
+    font-size: 1.3rem;
+    color: black;
+}
+
+.block-des a i {
+    font-size: 1.1rem;
+    margin: 10px;
+    font-weight: 600;
+    color: var(--border-color-black);
+}
+
+
+
+
+/* ################## FOOOTER PART ################ */
+
+.footer {
+    border-top: 4px solid var(--green-color);
+    background: black;
+    height: 70px;
+    margin-top: 10px;
+
+}
+
+footer.footer .body-space {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.body-space .copyright {
+    color: white;
+    font-size: 1.3rem;
+}
+
+.body-space .quick-opn {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.body-space .quick-opn li a {
+    color: white;
+    font-size: 1.3rem;
+}
